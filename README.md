@@ -39,13 +39,15 @@ This project demonstrates a decentralized, privacy-preserving electronic voting 
 ---
 
 ## Architecture
+
 ```mermaid
 graph TD
-  A[Frontend (HTML/JS)] -- REST API --> B[Backend (Express + zk-STARK)]
-  B -- Web3.js --> C[Smart Contract (Ethereum)]
-  C -- Vote Tally, Candidates --> B
-  B -- Candidates, Vote Counts --> A
+  A[Frontend (HTML/JS)] -- |REST API| --> B[Backend (Express + zk-STARK)]
+  B -- |Web3.js| --> C[Smart Contract (Ethereum)]
+  C -- |Vote Tally, Candidates| --> B
+  B -- |Candidates, Vote Counts| --> A
 ```
+
 - **Frontend**: User interface for voting and viewing results.
 - **Backend**: Generates and verifies zk-STARK proofs, interacts with the smart contract.
 - **Smart Contract**: Stores candidates, vote counts, and prevents double voting.
