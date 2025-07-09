@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Secure Voting with zk-STARKs</title>
+   </head>
+   <style>
+      body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+select, button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#status {
+    font-weight: bold;
+    margin-top: 15px;
+    color: #d9534f;
+}
+
+#voteCounts {
+    margin-top: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+   </style>
+   <body>
+      <h2>zk-STARK Secure Voting</h2>
+      <label for="accountSelect">Account:</label>
+      <select id="fromaccountSelect">
+         <option value="">Loading accounts...</option>
+      </select><br>
+      <select id="candidateList"></select>
+      <button id="voteButton">Vote</button>
+      <p id="status"></p>
+
+      <h3>Vote Counts</h3>
+      <div id="voteCounts"></div>
+
+      <script src="script.js"></script>
+   </body>
+
+</html>
